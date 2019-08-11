@@ -1,11 +1,3 @@
-\raggedright
-\footnotesize
-\begin{multicols}{3}	
-	\setlength{\premulticols}{1pt}
-	\setlength{\postmulticols}{1pt}
-	\setlength{\multicolsep}{1pt}
-	\setlength{\columnsep}{2pt}
-
 \begin{center}
      \Large{\underline{Datenträgerforensik}} \\
 \end{center}
@@ -80,4 +72,3 @@ cat test.txt:hidden.txt
 Abkürzung für \enquote{Linux Unified Key Setup}. LUKS ist eine Erweiterung von dm-crypt und fügt den verschlüsselten Daten einen Header hinzu. Einen LUKS-Container erkennt man am Header. Dieser beginnt mit den Bytes \enquote{4C 55 4B 53 BA BE}.\\
 Ein LUKS-Container kann beispielsweise mit losetup eingebunden (gemountet) werden. Ein typischer Aufruf kann so aussehen:\\
 sudo losetup -o 11071426702 /dev / loop3 myImage.img\\
-\end{multicols}

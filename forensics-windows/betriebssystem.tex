@@ -1,21 +1,10 @@
-\raggedright
-\footnotesize
-\begin{multicols}{3}	
-	% multicol parameters
-	% These lengths are set only within the two main columns
-	%\setlength{\columnseprule}{0.25pt}
-	\setlength{\premulticols}{1pt}
-	\setlength{\postmulticols}{1pt}
-	\setlength{\multicolsep}{1pt}
-	\setlength{\columnsep}{2pt}
-
 \begin{center}
      \Large{\underline{Betriebssystemforensik (allgemein)}} \\
 \end{center}
 
 \section{Betriebssystem}
 \subsection{Architektur}
-\subsubsection{Monolithisch (S.22)}
+\subsubsection{Monolithisch}
 \settowidth{\MyLen}{\texttt{speichereffizienz.spa}}
 \begin{tabular}{@{}p{\the\MyLen}%
 		@{}p{\linewidth-\the\MyLen}@{}}
@@ -25,7 +14,7 @@
 	\texttt{Wartbarkeit, Erweiterbarkeit} & Schlecht, da bei Änderungen viele Komponenten\\
 \end{tabular}
 
-\subsubsection{Geschichtet (S.23)}
+\subsubsection{Geschichtet}
 \settowidth{\MyLen}{\texttt{speichereffizienz.spa}}
 \begin{tabular}{@{}p{\the\MyLen}%
 		@{}p{\linewidth-\the\MyLen}@{}}
@@ -35,7 +24,7 @@
 	\texttt{Wartbarkeit, Erweiterbarkeit} & Besser, da Änderungen meist nur bei einzelnen Komponenten\\
 \end{tabular}
 
-\subsubsection{Mikrokernel (S.24)}
+\subsubsection{Mikrokernel}
 \settowidth{\MyLen}{\texttt{speichereffizienz.spa}}
 \begin{tabular}{@{}p{\the\MyLen}%
 		@{}p{\linewidth-\the\MyLen}@{}}
@@ -48,7 +37,7 @@
 \subsubsection{Vorteile virtuelles BS}
 Sandbox verbesserte Sicherheit durch Abschottung; bessere Ausnutzung des Systems durch mehrere VMs; herstellen kompatibler Laufzeitumgebungen\\
 
-\subsection{Ziele (S.12)}
+\subsection{Ziele}
 \settowidth{\MyLen}{\texttt{speichereffizienz.spa}}
 \begin{tabular}{@{}p{\the\MyLen}%
 		@{}p{\linewidth-\the\MyLen}@{}}
@@ -62,7 +51,7 @@ Prozess belegt zu viel Speicher, so dass andere Prozesse nicht ausgeführt werde
 Abbruch mit Ctrl+C funktioniert nicht, da Signal auf Ignorieren steht\\
 Prozess zieht alle Prozessorleistung, so dass andere Prozesse blockiert sind (unfaires Scheduling)
 
-\subsection{Aufgaben (S.14)}
+\subsection{Aufgaben}
 \settowidth{\MyLen}{\texttt{Anwenderschnittstelle.spa}}
 \begin{tabular}{@{}p{\the\MyLen}%
 		@{}p{\linewidth-\the\MyLen}@{}}
@@ -85,14 +74,14 @@ Prozess zieht alle Prozessorleistung, so dass andere Prozesse blockiert sind (un
 \end{tabular}
 
 \section{Dateisystem}
-\subsubsection{Zusammenhängende Belegung (S.104)}
+\subsubsection{Zusammenhängende Belegung}
 \settowidth{\MyLen}{\texttt{Belegungstabelle.spa}}
 \begin{tabular}{@{}p{\the\MyLen}@{}%
 		@{}p{\linewidth-\the\MyLen}@{}}
 \texttt{Belegungstabelle} & Datei, Start, Länge\\
 \end{tabular}
 
-\subsubsection{Verteilte Belegung verkettete Listen (FAT) (S.105)}
+\subsubsection{Verteilte Belegung verkettete Listen (FAT)}
 \settowidth{\MyLen}{\texttt{Belegungstabelle.spa}}
 \begin{tabular}{@{}p{\the\MyLen}@{}%
 		@{}p{\linewidth-\the\MyLen}@{}}
@@ -100,7 +89,7 @@ Prozess zieht alle Prozessorleistung, so dass andere Prozesse blockiert sind (un
 	\texttt{Hilfstabelle (FAT)} & Verweis auf nächste Adresse, Dateiende mit EOF\\
 \end{tabular}
 
-\subsubsection{Verteilte Belegung mittels Index-Liste (S.106)}
+\subsubsection{Verteilte Belegung mittels Index-Liste}
 \settowidth{\MyLen}{\texttt{Belegungstabelle.spa}}
 \begin{tabular}{@{}p{\the\MyLen}@{}%
 		@{}p{\linewidth-\the\MyLen}@{}}
@@ -112,11 +101,11 @@ Prozess zieht alle Prozessorleistung, so dass andere Prozesse blockiert sind (un
 \section{Windows}
 
 \subsection{Allgemein}
-\subsubsection{Windows Stations, Desktops und Session (S.34)}
+\subsubsection{Windows Stations, Desktops und Session}
 Authentifizierung Session-orientiert, \texttt{Session} beinhaltet mehrere \texttt{Stations}, \texttt{Stations} beinhalten Desktops mit Fenstern und GDI-Objekten. Sicherheitsbeschreiber eines Objekts ist mit \texttt{Station} verbunden, darüber Kontrolle von Benutzer zum Desktop
 
 \subsection{Prozesse und Dienste}
-\subsubsection{svchost.exe (Dienste) (S.138)}
+\subsubsection{svchost.exe (Dienste)}
 \begin{itemize}[leftmargin=*]
 	\item mit \texttt{tlist} laufende Prozesse mit Diensten auflisten (\texttt{tlist -m svchost.exe -s})
 	\item mit \texttt{Process-Explorer} farblich gekennzeichnete Dienste $\rightarrow$ Properties $\rightarrow$ Services
@@ -135,7 +124,7 @@ Mit Process Explorer und Process Hacker; Möglichkeit über Process Monitor Regi
 \subsubsection{Ausgeführte Dienste}
 z.B. über \texttt{msc} (services) oder Registry (siehe oben)
 
-\subsubsection{Mandatorische Zugriffsregeln (S.153)}
+\subsubsection{Mandatorische Zugriffsregeln}
 \settowidth{\MyLen}{\texttt{No-<Write|Read>-Down.spa}}
 \begin{tabular}{@{}p{\the\MyLen}%
 		@{}p{\linewidth-\the\MyLen}@{}}
@@ -144,7 +133,7 @@ z.B. über \texttt{msc} (services) oder Registry (siehe oben)
 \end{tabular}
 \textbf{Default:} No-Write-Up (für alle Objekte), No-Read-Up (für Prozesse und Threads)
 
-\subsection{DACL (S.156)}
+\subsection{DACL}
 Sicherheitsdeskriptor besteht aus \texttt{Header, SID Besitzer, SID Gruppe, DACL, SACL}\\
 \texttt{DACL} besteht aus ACEs mit \texttt{<Allow|Deny>, SID User, ACE-Bitmapp}\\
 \textbf{Regeln DACL}: Erst Einzel-ACE, dann Gruppe; Erst Verbote, dann Erlaubnisse; Reihenfolge von oben nach unten\\
@@ -213,5 +202,3 @@ Werkzeuge verwenden Informationen aus \path{/proc}-Verzeichnis\\
 	\texttt{Version BS} & \path{/proc/version} \\
 	\texttt{Dateisysteme} & \path{/proc/filesystem} \\
 \end{tabular}
-
-\end{multicols}
